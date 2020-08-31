@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../style/style.css?rnd=132">
+  
+    <!--***** dos lineas de scripts para guardar imagen-->
+    <script type="text/javascript" src="../js/html2canvas.js"></script>
+    <script type="text/javascript" src="../js/html2canvas.min.js"></script>
+    <!--***** Fin de dos lineas de scripts para guardar imagen-->
+
+</head>
+
+<body>
+
+    <div id="contenedor">
+      <div style="position:absolute;top:0.000000px;left:0.000000px"><nobr><img src ="bgimg/bg00001.jpg"/></nobr></div>
+      <p><span style="font-family:Helvetica;font-size:14.000000px;font-style:normal;font-weight:normal;color:#000000;"><span style="position: absolute; top: 152px; left: 10px"><nobr>Nombre del alumno (requerido) :<br>
+      <input type="text" id="fisica2_regNA" size="40" tabindex=1></nobr></span></span></p>
+      <p><span style="font-family:Helvetica;font-size:14.000000px;font-style:normal;font-weight:normal;color:#000000;"><span style="position: absolute; top: 250px; left: 12px"><nobr>Grupo (requerido): <br>
+      <input type="text" id="fisica2_regGP" size="5" tabindex=3></nobr></span></span></p>
+      <p><span style="font-family:Helvetica;font-size:14.000000px;font-style:normal;font-weight:normal;color:#000000;"><span style="position: absolute; top: 202px; left: 12px; width: 451px;"><nobr>Correo electrónico (requerido) :<br>
+      <input type="text" id="fisica2_regCA" size="40" tabindex=2></nobr></span></span></p>
+      <p><span style="font-family:Helvetica;font-size:14.000000px;font-style:normal;font-weight:normal;color:#000000;"><span style="position: absolute; top: 315px; left: 10px; width: 442px; height: 20px;"><nobr>Nombre del docente (requerido) :<br>
+      <input type="text" id="fisica2_regND" size="40" tabindex=4></nobr></span></span></p>
+      <p><span style="font-family:Helvetica;font-size:14.000000px;font-style:normal;font-weight:normal;color:#000000;"><span style="position: absolute; top: 379px; left: 10px"><nobr>Correo eletrónico del docente (requerido) :<br>
+      <input type="text" id="fisica2_regCD" size="40" tabindex=5><br>
+      <br>
+      <input type="button" onClick="save_data()" value="Guardar"  class="btn btn-primary">
+      <br></nobr></span></span></p><p><span style="font-family:Helvetica;font-size:24.000000px;font-style:normal;font-weight:normal;color:#000000;"><span style="position: absolute; top: 118px; left: 8px"><nobr>Registro de datos </nobr></span></span></p>      
+    </div>
+
+</body>
+<script type="text/javascript">
+    //Cargar datos
+    document.getElementById('fisica2_regNA').value = localStorage.getItem('fisica2_regNA');
+    document.getElementById('fisica2_regGP').value = localStorage.getItem('fisica2_regGP');
+    document.getElementById('fisica2_regCA').value = localStorage.getItem('fisica2_regCA');
+    document.getElementById('fisica2_regND').value = localStorage.getItem('fisica2_regND');
+    document.getElementById('fisica2_regCD').value = localStorage.getItem('fisica2_regCD');
+    //fin cargar datos
+    function save_data(){
+
+        var fisica2_regNA = document.getElementById('fisica2_regNA').value;
+        localStorage.setItem('fisica2_regNA', fisica2_regNA);
+        var fisica2_regGP = document.getElementById('fisica2_regGP').value;
+        localStorage.setItem('fisica2_regGP', fisica2_regGP);
+        var fisica2_regND = document.getElementById('fisica2_regND').value;
+        localStorage.setItem('fisica2_regND', fisica2_regND);
+        var fisica2_regCA = document.getElementById('fisica2_regCA').value;
+        localStorage.setItem('fisica2_regCA', fisica2_regCA);
+        var fisica2_regCD = document.getElementById('fisica2_regCD').value;
+        localStorage.setItem('fisica2_regCD', fisica2_regCD);
+
+        alert("Guardado con éxito");
+    }
+</script>
+</html> 

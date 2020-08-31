@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../style/style.css?rnd=132">
+  
+    <!--***** dos lineas de scripts para guardar imagen-->
+    <script type="text/javascript" src="../../js/html2canvas.js"></script>
+    <script type="text/javascript" src="../../js/html2canvas.min.js"></script>
+    <!--***** Fin de dos lineas de scripts para guardar imagen-->
+
+</head>
+
+<body>
+
+    <div id="contenedor">
+      <div style="position:absolute;top:0.000000px;left:0.000000px"><nobr><img height="1099.000000" width="872.000000" src ="bgimg/fondo.jpg"/></nobr></div>
+        <!--Empezar a agregar contenido-->
+        <span style="position: absolute; top: 233px; left: 631px">
+			<textarea rows = "1" cols = "15" maxlength = "15" id="fisica2_p52res1"></textarea><br>
+			<textarea rows = "1" cols = "15" maxlength = "15" id="fisica2_p52res2"></textarea><br>
+			<textarea rows = "1" cols = "15" maxlength = "15" id="fisica2_p52res3"></textarea><br>
+		<textarea rows = "1" cols = "15" maxlength = "15" id="fisica2_p52res4"></textarea>
+		</span>
+	  <span style="position: absolute; top: 323px; left: 631px">
+			<textarea rows = "1" cols = "15" maxlength = "15" id="fisica2_p52res5"></textarea><br>
+			<textarea rows = "1" cols = "15" maxlength = "15" id="fisica2_p52res6"></textarea><br>
+			<textarea rows = "1" cols = "15" maxlength = "15" id="fisica2_p52res7"></textarea><br>
+	  <textarea rows = "1" cols = "15" maxlength = "15" id="fisica2_p52res8"></textarea>
+	  </span>
+	  <span style="position: absolute; top: 399px; left: 631px">
+			<textarea rows = "1" cols = "15" maxlength = "15" id="fisica2_p52res9"></textarea><br>
+			<textarea rows = "1" cols = "15" maxlength = "15" id="fisica2_p52res10"></textarea><br>
+			<textarea rows = "1" cols = "15" maxlength = "15" id="fisica2_p52res11"></textarea><br>
+	  <textarea rows = "1" cols = "15" maxlength = "15" id="fisica2_p52res12"></textarea>
+	  </span>
+	  <span style="position: absolute; top: 484px; left: 631px">
+			<textarea rows = "1" cols = "15" maxlength = "15" id="fisica2_p52res13"></textarea><br>
+			<textarea rows = "1" cols = "15" maxlength = "15" id="fisica2_p52res14"></textarea><br>
+			<textarea rows = "1" cols = "15" maxlength = "15" id="fisica2_p52res15"></textarea><br>
+	  <textarea rows = "1" cols = "15" maxlength = "15" id="fisica2_p52res16"></textarea>
+	  </span>
+	  <span style="position: absolute; top: 585px; left: 631px">
+			<textarea rows = "1" cols = "15" maxlength = "15" id="fisica2_p52res17"></textarea><br>
+			<textarea rows = "1" cols = "15" maxlength = "15" id="fisica2_p52res18"></textarea><br>
+			<textarea rows = "1" cols = "15" maxlength = "15" id="fisica2_p52res19"></textarea><br>
+			<textarea rows = "1" cols = "15" maxlength = "15" id="fisica2_p52res20"></textarea><br>
+			<textarea rows = "1" cols = "15" maxlength = "15" id="fisica2_p52res21"></textarea><br>
+			<textarea rows = "1" cols = "15" maxlength = "15" id="fisica2_p52res22"></textarea><br>
+	  <textarea rows = "1" cols = "15" maxlength = "15" id="fisica2_p52res23"></textarea>
+	  </span>
+	  <span style="position: absolute; top: 752px; left: 631px">
+			<textarea rows = "1" cols = "15" maxlength = "15" id="fisica2_p52res24"></textarea><br>
+			<textarea rows = "1" cols = "15" maxlength = "15" id="fisica2_p52res25"></textarea><br>
+			<textarea rows = "1" cols = "15" maxlength = "15" id="fisica2_p52res26"></textarea><br>
+	  <textarea rows = "1" cols = "15" maxlength = "15" id="fisica2_p52res27"></textarea>
+	  </span>
+	  <span style="position: absolute; top: 858px; left: 631px">
+			<textarea rows = "1" cols = "15" maxlength = "15" id="fisica2_p52res28"></textarea><br>
+			<textarea rows = "1" cols = "15" maxlength = "15" id="fisica2_p52res29"></textarea><br>
+			<textarea rows = "1" cols = "15" maxlength = "15" id="fisica2_p52res30"></textarea><br>
+	  </span>
+		<span style="position: absolute; top: 929px; left: 631px">
+			<textarea rows = "1" cols = "15" maxlength = "15" id="fisica2_p52res31"></textarea><br>
+			<textarea rows = "1" cols = "15" maxlength = "15" id="fisica2_p52res32"></textarea><br>
+			<textarea rows = "1" cols = "15" maxlength = "15" id="fisica2_p52res33"></textarea><br>
+			<textarea rows = "1" cols = "15" maxlength = "15" id="fisica2_p52res34"></textarea>
+		</span>
+		
+       
+        <!--Fin del contenido-->
+           <!-- FORMULARIO AL FINAL DEL CONTENIDO -->
+
+		<form style="margin-top: 1070px;margin-left: 190px; position: absolute; z-index: 2;" id="myForm" action="../../send.php" method="post">
+			<textarea style="display:none;" id="myInput" name = "imagen" maxlength="10"></textarea>
+			<input type="button" onclick="save_data()" value="Guardar"  class="btn btn-primary">
+			&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="button" onclick="send_data(); loader(); return false" value="Enviar" class="btn btn-primary"> 
+			<input type="hidden" id="fisica2_regNA" name="fisica2_regNA">
+			<input type="hidden" id="fisica2_regGP" name="fisica2_regGP">
+			<input type="hidden" id="fisica2_regCA" name="fisica2_regCA">
+			<input type="hidden" id="fisica2_regND" name="fisica2_regND">
+			<input type="hidden" id="fisica2_regCD" name="fisica2_regCD">
+	  </form>
+
+		<!-- FIN FORMULARIO AL FINAL DEL CONTENIDO -->
+
+		<div id="loader" style="display:none; margin-top: 1060px;margin-left: 190px; position: absolute; z-index: 2;">
+			<img src="../../img/carga.gif"  width="180px" height="65px">
+		</div>
+            
+    </div>       
+</body>
+<script type="text/javascript">
+	//Carga datos del registro
+    document.getElementById('fisica2_regNA').value = localStorage.getItem('fisica2_regNA');
+    document.getElementById('fisica2_regGP').value = localStorage.getItem('fisica2_regGP');
+    document.getElementById('fisica2_regCA').value = localStorage.getItem('fisica2_regCA');
+    document.getElementById('fisica2_regND').value = localStorage.getItem('fisica2_regND');
+    document.getElementById('fisica2_regCD').value = localStorage.getItem('fisica2_regCD');
+
+	 document.getElementById('fisica2_p52res1').value = localStorage.getItem('fisica2_p52res1');
+    document.getElementById('fisica2_p52res2').value = localStorage.getItem('fisica2_p52res2');
+    document.getElementById('fisica2_p52res3').value = localStorage.getItem('fisica2_p52res3');
+    document.getElementById('fisica2_p52res4').value = localStorage.getItem('fisica2_p52res4');
+    document.getElementById('fisica2_p52res5').value = localStorage.getItem('fisica2_p52res5');
+    document.getElementById('fisica2_p52res6').value = localStorage.getItem('fisica2_p52res6');
+    document.getElementById('fisica2_p52res7').value = localStorage.getItem('fisica2_p52res7');
+    document.getElementById('fisica2_p52res8').value = localStorage.getItem('fisica2_p52res8');
+    document.getElementById('fisica2_p52res9').value = localStorage.getItem('fisica2_p52res9');
+    document.getElementById('fisica2_p52res10').value = localStorage.getItem('fisica2_p52res10');
+    document.getElementById('fisica2_p52res11').value = localStorage.getItem('fisica2_p52res11');
+    document.getElementById('fisica2_p52res12').value = localStorage.getItem('fisica2_p52res12');
+    document.getElementById('fisica2_p52res13').value = localStorage.getItem('fisica2_p52res13');
+    document.getElementById('fisica2_p52res14').value = localStorage.getItem('fisica2_p52res14');
+    document.getElementById('fisica2_p52res15').value = localStorage.getItem('fisica2_p52res15');
+    document.getElementById('fisica2_p52res16').value = localStorage.getItem('fisica2_p52res16');
+    document.getElementById('fisica2_p52res17').value = localStorage.getItem('fisica2_p52res17');
+    document.getElementById('fisica2_p52res18').value = localStorage.getItem('fisica2_p52res18');
+    document.getElementById('fisica2_p52res19').value = localStorage.getItem('fisica2_p52res19');
+    document.getElementById('fisica2_p52res20').value = localStorage.getItem('fisica2_p52res20');
+    document.getElementById('fisica2_p52res21').value = localStorage.getItem('fisica2_p52res21');
+    document.getElementById('fisica2_p52res22').value = localStorage.getItem('fisica2_p52res22');
+    document.getElementById('fisica2_p52res23').value = localStorage.getItem('fisica2_p52res23');
+    document.getElementById('fisica2_p52res24').value = localStorage.getItem('fisica2_p52res24');
+    document.getElementById('fisica2_p52res25').value = localStorage.getItem('fisica2_p52res25');
+    document.getElementById('fisica2_p52res26').value = localStorage.getItem('fisica2_p52res26');
+    document.getElementById('fisica2_p52res27').value = localStorage.getItem('fisica2_p52res27');
+    document.getElementById('fisica2_p52res28').value = localStorage.getItem('fisica2_p52res28');
+    document.getElementById('fisica2_p52res29').value = localStorage.getItem('fisica2_p52res29');
+    document.getElementById('fisica2_p52res30').value = localStorage.getItem('fisica2_p52res30');
+    document.getElementById('fisica2_p52res31').value = localStorage.getItem('fisica2_p52res31');
+    document.getElementById('fisica2_p52res32').value = localStorage.getItem('fisica2_p52res32');
+    document.getElementById('fisica2_p52res33').value = localStorage.getItem('fisica2_p52res33');
+    document.getElementById('fisica2_p52res34').value = localStorage.getItem('fisica2_p52res34');
+    
+
+    function save_data(){
+        var fisica2_p52res1 = document.getElementById('fisica2_p52res1').value;
+        localStorage.setItem('fisica2_p52res1', fisica2_p52res1);
+        var fisica2_p52res2 = document.getElementById('fisica2_p52res2').value;
+        localStorage.setItem('fisica2_p52res2', fisica2_p52res2);
+        var fisica2_p52res3 = document.getElementById('fisica2_p52res3').value;
+        localStorage.setItem('fisica2_p52res3', fisica2_p52res3);
+        var fisica2_p52res4 = document.getElementById('fisica2_p52res4').value;
+        localStorage.setItem('fisica2_p52res4', fisica2_p52res4);
+        var fisica2_p52res5 = document.getElementById('fisica2_p52res5').value;
+        localStorage.setItem('fisica2_p52res5', fisica2_p52res5);
+        var fisica2_p52res6 = document.getElementById('fisica2_p52res6').value;
+        localStorage.setItem('fisica2_p52res6', fisica2_p52res6);
+        var fisica2_p52res7 = document.getElementById('fisica2_p52res7').value;
+        localStorage.setItem('fisica2_p52res7', fisica2_p52res7);
+        var fisica2_p52res8 = document.getElementById('fisica2_p52res8').value;
+        localStorage.setItem('fisica2_p52res8', fisica2_p52res8);
+        var fisica2_p52res9 = document.getElementById('fisica2_p52res9').value;
+        localStorage.setItem('fisica2_p52res9', fisica2_p52res9);
+        var fisica2_p52res10 = document.getElementById('fisica2_p52res10').value;
+        localStorage.setItem('fisica2_p52res10', fisica2_p52res10);
+        var fisica2_p52res11 = document.getElementById('fisica2_p52res11').value;
+        localStorage.setItem('fisica2_p52res11', fisica2_p52res11);
+        var fisica2_p52res12 = document.getElementById('fisica2_p52res12').value;
+        localStorage.setItem('fisica2_p52res12', fisica2_p52res12);
+        var fisica2_p52res13 = document.getElementById('fisica2_p52res13').value;
+        localStorage.setItem('fisica2_p52res13', fisica2_p52res13);
+        var fisica2_p52res14 = document.getElementById('fisica2_p52res14').value;
+        localStorage.setItem('fisica2_p52res14', fisica2_p52res14);
+        var fisica2_p52res15 = document.getElementById('fisica2_p52res15').value;
+        localStorage.setItem('fisica2_p52res15', fisica2_p52res15);
+        var fisica2_p52res16 = document.getElementById('fisica2_p52res16').value;
+        localStorage.setItem('fisica2_p52res16', fisica2_p52res16);
+        var fisica2_p52res17 = document.getElementById('fisica2_p52res17').value;
+        localStorage.setItem('fisica2_p52res17', fisica2_p52res17);
+        var fisica2_p52res18 = document.getElementById('fisica2_p52res18').value;
+        localStorage.setItem('fisica2_p52res18', fisica2_p52res18);
+        var fisica2_p52res19 = document.getElementById('fisica2_p52res19').value;
+        localStorage.setItem('fisica2_p52res19', fisica2_p52res19);
+        var fisica2_p52res20 = document.getElementById('fisica2_p52res20').value;
+        localStorage.setItem('fisica2_p52res20', fisica2_p52res20);
+        var fisica2_p52res21 = document.getElementById('fisica2_p52res21').value;
+        localStorage.setItem('fisica2_p52res21', fisica2_p52res21);
+        var fisica2_p52res22 = document.getElementById('fisica2_p52res22').value;
+        localStorage.setItem('fisica2_p52res22', fisica2_p52res22);
+        var fisica2_p52res23 = document.getElementById('fisica2_p52res23').value;
+        localStorage.setItem('fisica2_p52res23', fisica2_p52res23);
+        var fisica2_p52res24 = document.getElementById('fisica2_p52res24').value;
+        localStorage.setItem('fisica2_p52res24', fisica2_p52res24);
+        var fisica2_p52res25 = document.getElementById('fisica2_p52res25').value;
+        localStorage.setItem('fisica2_p52res25', fisica2_p52res25);
+        var fisica2_p52res26 = document.getElementById('fisica2_p52res26').value;
+        localStorage.setItem('fisica2_p52res26', fisica2_p52res26);
+        var fisica2_p52res27 = document.getElementById('fisica2_p52res27').value;
+        localStorage.setItem('fisica2_p52res27', fisica2_p52res27);
+        var fisica2_p52res28 = document.getElementById('fisica2_p52res28').value;
+        localStorage.setItem('fisica2_p52res28', fisica2_p52res28);
+        var fisica2_p52res29 = document.getElementById('fisica2_p52res29').value;
+        localStorage.setItem('fisica2_p52res29', fisica2_p52res29);
+        var fisica2_p52res30 = document.getElementById('fisica2_p52res30').value;
+        localStorage.setItem('fisica2_p52res30', fisica2_p52res30);
+        var fisica2_p52res31 = document.getElementById('fisica2_p52res31').value;
+        localStorage.setItem('fisica2_p52res31', fisica2_p52res31);
+        var fisica2_p52res32 = document.getElementById('fisica2_p52res32').value;
+        localStorage.setItem('fisica2_p52res32', fisica2_p52res32);
+        var fisica2_p52res33 = document.getElementById('fisica2_p52res33').value;
+        localStorage.setItem('fisica2_p52res33', fisica2_p52res33);
+        var fisica2_p52res34 = document.getElementById('fisica2_p52res34').value;
+        localStorage.setItem('fisica2_p52res34', fisica2_p52res34);
+        
+
+        alert("Guardado correctamente");
+    }
+
+    function send_data(){
+        pantallazo();
+        setTimeout(function(){document.getElementById("myForm").submit();}, 3000);
+    }
+
+    function pantallazo(){
+
+        html2canvas(document.body).then(canvas => {
+        	var dataURL = canvas.toDataURL();
+            console.log(dataURL);
+            document.getElementById("myInput").value = dataURL;
+            var canvas = document.createElement("canvas");
+            var ctx=canvas.getContext("2d");
+            var cw=canvas.width;
+            var ch=canvas.height;
+            var maxW=1280;
+            var maxH=1024;
+
+            var output = document.getElementById('myInput');
+	        var img = new Image;
+            img.onload = function() {
+                var iw=img.width;
+                var ih=img.height;
+                var scale=Math.min((maxW/iw),(maxH/ih));
+                var iwScaled=iw*scale;
+                var ihScaled=ih*scale;
+                canvas.width=iwScaled;
+                canvas.height=ihScaled;
+                ctx.drawImage(img,0,0,iwScaled,ihScaled);
+     	        output.value = canvas.toDataURL("../image/jpeg",1);
+            }
+            img.src = dataURL
+        });
+    }
+    
+    function loader(){
+		document.getElementById('loader').style.display = 'Block';
+ 
+	}
+
+</script>
+
+</html>

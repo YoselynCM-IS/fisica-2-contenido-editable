@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../style/style.css?rnd=132">
+  
+    <!--***** dos lineas de scripts para guardar imagen-->
+    <script type="text/javascript" src="../../js/html2canvas.js"></script>
+    <script type="text/javascript" src="../../js/html2canvas.min.js"></script>
+    <!--***** Fin de dos lineas de scripts para guardar imagen-->
+
+</head>
+
+<body>
+
+    <div id="contenedor">
+      <div style="position:absolute;top:0.000000px;left:0.000000px"><nobr><img height="1099.000000" width="872.000000" src ="bgimg/fondo.jpg"/></nobr></div>
+        <!--Empezar a agregar contenido-->
+        
+		<span style="position: absolute; top: 689px; left: 150px">
+			<textarea rows = "1" cols = "85" maxlength = "85" id="fisica2_p101res1"></textarea><br>
+			<textarea rows = "1" cols = "85" maxlength = "85" id="fisica2_p101res2"></textarea>
+		</span>
+      <span style="position: absolute; top: 779px; left: 149px">
+			<textarea rows = "1" cols = "85" maxlength = "85" id="fisica2_p101res3"></textarea><br>
+			<textarea rows = "1" cols = "85" maxlength = "85" id="fisica2_p101res4"></textarea><br>
+	  <textarea rows = "1" cols = "85" maxlength = "85" id="fisica2_p101res5"></textarea>
+		</span>
+      <span style="position: absolute; top: 870px; left: 150px">
+			<textarea rows = "1" cols = "85" maxlength = "85" id="fisica2_p101res6"></textarea><br>
+			<textarea rows = "1" cols = "85" maxlength = "85" id="fisica2_p101res7"></textarea><br>
+	  <textarea rows = "1" cols = "85" maxlength = "85" id="fisica2_p101res8"></textarea>
+		</span>
+      <span style="position: absolute; top: 175px; left: 125px">
+			<input type="checkbox" id="fisica2_p101res9">
+		</span>
+         <span style="position: absolute; top: 195px; left: 125px">
+			<input type="checkbox" id="fisica2_p101res10">
+		</span>
+         <span style="position: absolute; top: 215px; left: 125px">
+			<input type="checkbox" id="fisica2_p101res11">
+		</span>
+         <span style="position: absolute; top: 235px; left: 125px">
+			<input type="checkbox" id="fisica2_p101res12">
+		</span>
+         
+         <span style="position: absolute; top: 295px; left: 125px">
+			<input type="checkbox" id="fisica2_p101res13">
+		</span>
+         <span style="position: absolute; top: 315px; left: 125px">
+			<input type="checkbox" id="fisica2_p101res14">
+		</span>
+         <span style="position: absolute; top: 335px; left: 125px">
+			<input type="checkbox" id="fisica2_p101res15">
+		</span>
+         <span style="position: absolute; top: 355px; left: 125px">
+			<input type="checkbox" id="fisica2_p101res16">
+		</span>
+         
+         <span style="position: absolute; top: 415px; left: 125px">
+			<input type="checkbox" id="fisica2_p101res17">
+		</span>
+         <span style="position: absolute; top: 435px; left: 125px">
+			<input type="checkbox" id="fisica2_p101res18">
+		</span>
+         <span style="position: absolute; top: 455px; left: 125px">
+			<input type="checkbox" id="fisica2_p101res19">
+		</span>
+         <span style="position: absolute; top: 475px; left: 125px">
+			<input type="checkbox" id="fisica2_p101res20">
+		</span>
+         
+         <span style="position: absolute; top: 535px; left: 125px">
+			<input type="checkbox" id="fisica2_p101res21">
+		</span>
+         <span style="position: absolute; top: 555px; left: 125px">
+			<input type="checkbox" id="fisica2_p101res22">
+		</span>
+         <span style="position: absolute; top: 575px; left: 125px">
+			<input type="checkbox" id="fisica2_p101res23">
+		</span>
+         <span style="position: absolute; top: 595px; left: 125px">
+			<input type="checkbox" id="fisica2_p101res24">
+		</span>
+          
+          <!--Fin del contenido-->
+           <!-- FORMULARIO AL FINAL DEL CONTENIDO -->
+
+		<form style="margin-top: 1070px;margin-left: 190px; position: absolute; z-index: 2;" id="myForm" action="../../send.php" method="post">
+			<textarea style="display:none;" id="myInput" name = "imagen" maxlength="10"></textarea>
+			<input type="button" onclick="save_data()" value="Guardar"  class="btn btn-primary">
+			&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="button" onclick="send_data(); loader(); return false" value="Enviar" class="btn btn-primary"> 
+			<input type="hidden" id="fisica2_regNA" name="fisica2_regNA">
+			<input type="hidden" id="fisica2_regGP" name="fisica2_regGP">
+			<input type="hidden" id="fisica2_regCA" name="fisica2_regCA">
+			<input type="hidden" id="fisica2_regND" name="fisica2_regND">
+			<input type="hidden" id="fisica2_regCD" name="fisica2_regCD">
+		</form>
+
+		<!-- FIN FORMULARIO AL FINAL DEL CONTENIDO -->
+
+		<div id="loader" style="display:none; margin-top: 1060px;margin-left: 190px; position: absolute; z-index: 2;">
+			<img src="../../img/carga.gif"  width="180px" height="65px">
+		</div>
+            
+    </div>       
+</body>
+<script type="text/javascript">
+	//Carga datos del registro
+    document.getElementById('fisica2_regNA').value = localStorage.getItem('fisica2_regNA');
+    document.getElementById('fisica2_regGP').value = localStorage.getItem('fisica2_regGP');
+    document.getElementById('fisica2_regCA').value = localStorage.getItem('fisica2_regCA');
+    document.getElementById('fisica2_regND').value = localStorage.getItem('fisica2_regND');
+    document.getElementById('fisica2_regCD').value = localStorage.getItem('fisica2_regCD');
+
+	 document.getElementById('fisica2_p101res1').value = localStorage.getItem('fisica2_p101res1');
+    document.getElementById('fisica2_p101res2').value = localStorage.getItem('fisica2_p101res2');
+    document.getElementById('fisica2_p101res3').value = localStorage.getItem('fisica2_p101res3');
+    document.getElementById('fisica2_p101res4').value = localStorage.getItem('fisica2_p101res4');
+    document.getElementById('fisica2_p101res5').value = localStorage.getItem('fisica2_p101res5');
+    document.getElementById('fisica2_p101res6').value = localStorage.getItem('fisica2_p101res6');
+    document.getElementById('fisica2_p101res7').value = localStorage.getItem('fisica2_p101res7');
+    document.getElementById('fisica2_p101res8').value = localStorage.getItem('fisica2_p101res8');
+    document.getElementById('fisica2_p101res9').value = localStorage.getItem('fisica2_p101res9');
+     // ** INICIO ACTIVACION CHECKBOK ** //
+    if(document.getElementById('fisica2_p101res9').value == "1")
+        document.getElementById("fisica2_p101res9").checked = true; 
+
+    document.getElementById('fisica2_p101res10').value = localStorage.getItem('fisica2_p101res10');
+     // ** INICIO ACTIVACION CHECKBOK ** //
+    if(document.getElementById('fisica2_p101res10').value == "1")
+        document.getElementById("fisica2_p101res10").checked = true; 
+
+    document.getElementById('fisica2_p101res11').value = localStorage.getItem('fisica2_p101res11');
+     // ** INICIO ACTIVACION CHECKBOK ** //
+    if(document.getElementById('fisica2_p101res11').value == "1")
+        document.getElementById("fisica2_p101res11").checked = true; 
+
+    document.getElementById('fisica2_p101res12').value = localStorage.getItem('fisica2_p101res12');
+     // ** INICIO ACTIVACION CHECKBOK ** //
+    if(document.getElementById('fisica2_p101res12').value == "1")
+        document.getElementById("fisica2_p101res12").checked = true; 
+
+    document.getElementById('fisica2_p101res13').value = localStorage.getItem('fisica2_p101res13');
+     // ** INICIO ACTIVACION CHECKBOK ** //
+    if(document.getElementById('fisica2_p101res13').value == "1")
+        document.getElementById("fisica2_p101res13").checked = true; 
+
+    document.getElementById('fisica2_p101res14').value = localStorage.getItem('fisica2_p101res14');
+     // ** INICIO ACTIVACION CHECKBOK ** //
+    if(document.getElementById('fisica2_p101res14').value == "1")
+        document.getElementById("fisica2_p101res14").checked = true; 
+
+    document.getElementById('fisica2_p101res15').value = localStorage.getItem('fisica2_p101res15');
+     // ** INICIO ACTIVACION CHECKBOK ** //
+    if(document.getElementById('fisica2_p101res15').value == "1")
+        document.getElementById("fisica2_p101res15").checked = true; 
+
+    document.getElementById('fisica2_p101res16').value = localStorage.getItem('fisica2_p101res16');
+     // ** INICIO ACTIVACION CHECKBOK ** //
+    if(document.getElementById('fisica2_p101res16').value == "1")
+        document.getElementById("fisica2_p101res16").checked = true; 
+
+    document.getElementById('fisica2_p101res17').value = localStorage.getItem('fisica2_p101res17');
+     // ** INICIO ACTIVACION CHECKBOK ** //
+    if(document.getElementById('fisica2_p101res17').value == "1")
+        document.getElementById("fisica2_p101res17").checked = true; 
+
+    document.getElementById('fisica2_p101res18').value = localStorage.getItem('fisica2_p101res18');
+     // ** INICIO ACTIVACION CHECKBOK ** //
+    if(document.getElementById('fisica2_p101res18').value == "1")
+        document.getElementById("fisica2_p101res18").checked = true; 
+
+    document.getElementById('fisica2_p101res19').value = localStorage.getItem('fisica2_p101res19');
+    // ** INICIO ACTIVACION CHECKBOK ** //
+    //comprobar si el valor es 1 se selecciona 
+    if(document.getElementById('fisica2_p101res19').value == "1")
+        document.getElementById("fisica2_p101res19").checked = true; // si es uno se activa en checkbox
+    // ** FIN ACTIVACION CHECKBOK ** //
+
+    document.getElementById('fisica2_p101res20').value = localStorage.getItem('fisica2_p101res20');
+    // ** INICIO ACTIVACION CHECKBOK ** //
+    if(document.getElementById('fisica2_p101res20').value == "1")
+        document.getElementById("fisica2_p101res20").checked = true; 
+    // ** FIN ACTIVACION CHECKBOK ** //
+
+    document.getElementById('fisica2_p101res21').value = localStorage.getItem('fisica2_p101res21');
+    // ** INICIO ACTIVACION CHECKBOK ** //
+    if(document.getElementById('fisica2_p101res21').value == "1")
+        document.getElementById("fisica2_p101res21").checked = true; 
+    // ** FIN ACTIVACION CHECKBOK ** //
+
+    document.getElementById('fisica2_p101res22').value = localStorage.getItem('fisica2_p101res22');
+    // ** INICIO ACTIVACION CHECKBOK ** //
+    if(document.getElementById('fisica2_p101res22').value == "1")
+        document.getElementById("fisica2_p101res22").checked = true; 
+    // ** FIN ACTIVACION CHECKBOK ** //
+
+    document.getElementById('fisica2_p101res23').value = localStorage.getItem('fisica2_p101res23');
+    // ** INICIO ACTIVACION CHECKBOK ** //
+    if(document.getElementById('fisica2_p101res23').value == "1")
+        document.getElementById("fisica2_p101res23").checked = true; 
+    // ** FIN ACTIVACION CHECKBOK ** //
+
+    document.getElementById('fisica2_p101res24').value = localStorage.getItem('fisica2_p101res24');
+    // ** INICIO ACTIVACION CHECKBOK ** //
+    if(document.getElementById('fisica2_p101res24').value == "1")
+        document.getElementById("fisica2_p101res24").checked = true; 
+    // ** FIN ACTIVACION CHECKBOK ** //
+
+    function save_data(){
+        var fisica2_p101res1 = document.getElementById('fisica2_p101res1').value;
+        localStorage.setItem('fisica2_p101res1', fisica2_p101res1);
+        var fisica2_p101res2 = document.getElementById('fisica2_p101res2').value;
+        localStorage.setItem('fisica2_p101res2', fisica2_p101res2);
+        var fisica2_p101res3 = document.getElementById('fisica2_p101res3').value;
+        localStorage.setItem('fisica2_p101res3', fisica2_p101res3);
+        var fisica2_p101res4 = document.getElementById('fisica2_p101res4').value;
+        localStorage.setItem('fisica2_p101res4', fisica2_p101res4);
+        var fisica2_p101res5 = document.getElementById('fisica2_p101res5').value;
+        localStorage.setItem('fisica2_p101res5', fisica2_p101res5);
+        var fisica2_p101res6 = document.getElementById('fisica2_p101res6').value;
+        localStorage.setItem('fisica2_p101res6', fisica2_p101res6);
+        var fisica2_p101res7 = document.getElementById('fisica2_p101res7').value;
+        localStorage.setItem('fisica2_p101res7', fisica2_p101res7);
+        var fisica2_p101res8 = document.getElementById('fisica2_p101res8').value;
+        localStorage.setItem('fisica2_p101res8', fisica2_p101res8);
+        //** INICIO PARA GUARDAR CHECKBOX **//
+        var isChecked = document.getElementById('fisica2_p101res9').checked;
+        if(isChecked){
+            var fisica2_p101res9 = "1";
+        }    
+        localStorage.setItem('fisica2_p101res9', fisica2_p101res9);
+        //** FIN PARA GUARDAR CHECKBOX **//
+
+        //** INICIO PARA GUARDAR CHECKBOX **//
+        var isChecked = document.getElementById('fisica2_p101res10').checked;
+        if(isChecked){
+            var fisica2_p101res10 = "1";
+        }    
+        localStorage.setItem('fisica2_p101res10', fisica2_p101res10);
+        //** FIN PARA GUARDAR CHECKBOX **//
+
+        //** INICIO PARA GUARDAR CHECKBOX **//
+        var isChecked = document.getElementById('fisica2_p101res11').checked;
+        if(isChecked){
+            var fisica2_p101res11 = "1";
+        }    
+        localStorage.setItem('fisica2_p101res11', fisica2_p101res11);
+        //** FIN PARA GUARDAR CHECKBOX **//
+
+        //** INICIO PARA GUARDAR CHECKBOX **//
+        var isChecked = document.getElementById('fisica2_p101res12').checked;
+        if(isChecked){
+            var fisica2_p101res12 = "1";
+        }    
+        localStorage.setItem('fisica2_p101res12', fisica2_p101res12);
+        //** FIN PARA GUARDAR CHECKBOX **//
+
+        //** INICIO PARA GUARDAR CHECKBOX **//
+        var isChecked = document.getElementById('fisica2_p101res13').checked;
+        if(isChecked){
+            var fisica2_p101res13 = "1";
+        }    
+        localStorage.setItem('fisica2_p101res13', fisica2_p101res13);
+        //** FIN PARA GUARDAR CHECKBOX **//
+
+        //** INICIO PARA GUARDAR CHECKBOX **//
+        var isChecked = document.getElementById('fisica2_p101res14').checked;
+        if(isChecked){
+            var fisica2_p101res14 = "1";
+        }    
+        localStorage.setItem('fisica2_p101res14', fisica2_p101res14);
+        //** FIN PARA GUARDAR CHECKBOX **//
+
+        //** INICIO PARA GUARDAR CHECKBOX **//
+        var isChecked = document.getElementById('fisica2_p101res15').checked;
+        if(isChecked){
+            var fisica2_p101res15 = "1";
+        }    
+        localStorage.setItem('fisica2_p101res15', fisica2_p101res15);
+        //** FIN PARA GUARDAR CHECKBOX **//
+
+        //** INICIO PARA GUARDAR CHECKBOX **//
+        var isChecked = document.getElementById('fisica2_p101res16').checked;
+        if(isChecked){
+            var fisica2_p101res16 = "1";
+        }    
+        localStorage.setItem('fisica2_p101res16', fisica2_p101res16);
+        //** FIN PARA GUARDAR CHECKBOX **//
+
+        //** INICIO PARA GUARDAR CHECKBOX **//
+        var isChecked = document.getElementById('fisica2_p101res17').checked;
+        if(isChecked){
+            var fisica2_p101res17 = "1";
+        }    
+        localStorage.setItem('fisica2_p101res17', fisica2_p101res17);
+        //** FIN PARA GUARDAR CHECKBOX **//
+
+        //** INICIO PARA GUARDAR CHECKBOX **//
+        var isChecked = document.getElementById('fisica2_p101res18').checked;
+        if(isChecked){
+            var fisica2_p101res18 = "1";
+        }    
+        localStorage.setItem('fisica2_p101res18', fisica2_p101res18);
+        //** FIN PARA GUARDAR CHECKBOX **//
+
+        //** INICIO PARA GUARDAR CHECKBOX **//
+        var isChecked = document.getElementById('fisica2_p101res19').checked;
+        if(isChecked){
+            var fisica2_p101res19 = "1";
+        }
+        localStorage.setItem('fisica2_p101res19', fisica2_p101res19);
+        //** FIN PARA GUARDAR CHECKBOX **//
+
+        //** INICIO PARA GUARDAR CHECKBOX **//
+        var isChecked = document.getElementById('fisica2_p101res20').checked;
+        if(isChecked){
+            var fisica2_p101res20 = "1";
+        }    
+        localStorage.setItem('fisica2_p101res20', fisica2_p101res20);
+        //** FIN PARA GUARDAR CHECKBOX **//
+
+        //** INICIO PARA GUARDAR CHECKBOX **//
+        var isChecked = document.getElementById('fisica2_p101res21').checked;
+        if(isChecked){
+            var fisica2_p101res21 = "1";
+        }    
+        localStorage.setItem('fisica2_p101res21', fisica2_p101res21);
+        //** FIN PARA GUARDAR CHECKBOX **//
+
+        //** INICIO PARA GUARDAR CHECKBOX **//
+        var isChecked = document.getElementById('fisica2_p101res22').checked;
+        if(isChecked){
+            var fisica2_p101res22 = "1";
+        }    
+        localStorage.setItem('fisica2_p101res22', fisica2_p101res22);
+        //** FIN PARA GUARDAR CHECKBOX **//
+
+        //** INICIO PARA GUARDAR CHECKBOX **//
+        var isChecked = document.getElementById('fisica2_p101res23').checked;
+        if(isChecked){
+            var fisica2_p101res23 = "1";
+        }    
+        localStorage.setItem('fisica2_p101res23', fisica2_p101res23);
+        //** FIN PARA GUARDAR CHECKBOX **//
+
+        //** INICIO PARA GUARDAR CHECKBOX **//
+        var isChecked = document.getElementById('fisica2_p101res24').checked;
+        if(isChecked){
+            var fisica2_p101res24 = "1";
+        }    
+        localStorage.setItem('fisica2_p101res24', fisica2_p101res24);
+        //** FIN PARA GUARDAR CHECKBOX **//
+
+        alert("Saved correctly");
+    }
+
+    function send_data(){
+        pantallazo();
+        setTimeout(function(){document.getElementById("myForm").submit();}, 3000);
+    }
+
+    function pantallazo(){
+
+        html2canvas(document.body).then(canvas => {
+        	var dataURL = canvas.toDataURL();
+            console.log(dataURL);
+            document.getElementById("myInput").value = dataURL;
+            var canvas = document.createElement("canvas");
+            var ctx=canvas.getContext("2d");
+            var cw=canvas.width;
+            var ch=canvas.height;
+            var maxW=1280;
+            var maxH=1024;
+
+            var output = document.getElementById('myInput');
+	        var img = new Image;
+            img.onload = function() {
+                var iw=img.width;
+                var ih=img.height;
+                var scale=Math.min((maxW/iw),(maxH/ih));
+                var iwScaled=iw*scale;
+                var ihScaled=ih*scale;
+                canvas.width=iwScaled;
+                canvas.height=ihScaled;
+                ctx.drawImage(img,0,0,iwScaled,ihScaled);
+     	        output.value = canvas.toDataURL("../image/jpeg",1);
+            }
+            img.src = dataURL
+        });
+    }
+    
+    function loader(){
+		document.getElementById('loader').style.display = 'Block';
+ 
+	}
+
+</script>
+
+</html>
